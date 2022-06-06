@@ -74,7 +74,7 @@ train_step = tf.train.AdamOptimizer(0.01).minimize(cross_entropy)
  
 sess = tf.Session()
 
-#训练500次
+#训练200次
 for i in range(200):
     sess.run(train_step, feed_dict={xs: train_x_disorder, ys: train_y_disorder, keep_prob: 0.7})
     print(i,'误差=',sess.run(cross_entropy, feed_dict={xs: train_x_disorder, ys: train_y_disorder, keep_prob: 1.0}))  # 输出loss值
